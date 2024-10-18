@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логический Тест</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        #result {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Логический Тест</h1>
+    <form id="quiz-form">
+        <div class="question">
+            <label>1. Что такое логическое выражение?</label><br>
+            <input type="radio" name="q1" value="A"> A) Выражение, содержащее операции над строками<br>
+            <input type="radio" name="q1" value="B"> B) Выражение, содержащее операции над логическими значениями (True/False)<br>
+            <input type="radio" name="q1" value="C"> C) Выражение, содержащее математические операции<br>
+            <input type="radio" name="q1" value="D"> D) Выражение, содержащее текстовые данные<br>
+        </div>
+        <div class="question">
+            <label>2. Что будет результатом логической операции True AND False?</label><br>
+            <input type="radio" name="q2" value="A"> A) True<br>
+            <input type="radio" name="q2" value="B"> B) False<br>
+            <input type="radio" name="q2" value="C"> C) Ошибка<br>
+            <input type="radio" name="q2" value="D"> D) Ничего<br>
+        </div>
+        <div class="question">
+            <label>3. Какой оператор используется для логического ИЛИ в языке Python?</label><br>
+            <input type="radio" name="q3" value="A"> A) &&<br>
+            <input type="radio" name="q3" value="B"> B) ||<br>
+            <input type="radio" name="q3" value="C"> C) or<br>
+            <input type="radio" name="q3" value="D"> D) and<br>
+        </div>
+        <div class="question">
+            <label>4. Как называется операция, которая меняет значение логической переменной на противоположное?</label><br>
+            <input type="radio" name="q4" value="A"> A) Логическое умножение<br>
+            <input type="radio" name="q4" value="B"> B) Логическое сложение<br>
+            <input type="radio" name="q4" value="C"> C) Логическое отрицание<br>
+            <input type="radio" name="q4" value="D"> D) Логическая эквивалентность<br>
+        </div>
+        <div class="question">
+            <label>5. Какой результат выражения (True OR False) AND False?</label><br>
+            <input type="radio" name="q5" value="A"> A) True<br>
+            <input type="radio" name="q5" value="B"> B) False<br>
+            <input type="radio" name="q5" value="C"> C) Ошибка<br>
+            <input type="radio" name="q5" value="D"> D) Неопределено<br>
+        </div>
+        <div class="question">
+            <label>6. Какие значения принимает логическая переменная?</label><br>
+            <input type="radio" name="q6" value="A"> A) Целые числа<br>
+            <input type="radio" name="q6" value="B"> B) Строки<br>
+            <input type="radio" name="q6" value="C"> C) Только True или False<br>
+            <input type="radio" name="q6" value="D"> D) Любые значения<br>
+        </div>
+        <div class="question">
+            <label>7. Что делает логическая операция "исключающее ИЛИ" (XOR)?</label><br>
+            <input type="radio" name="q7" value="A"> A) Возвращает True, если оба операнда True<br>
+            <input type="radio" name="q7" value="B"> B) Возвращает True, если оба операнда False<br>
+            <input type="radio" name="q7" value="C"> C) Возвращает True, если только одно из значений True<br>
+            <input type="radio" name="q7" value="D"> D) Возвращает False, если хотя бы одно значение True<br>
+        </div>
+        <div class="question">
+            <label>8. Какое значение вернет выражение not (True and False)?</label><br>
+            <input type="radio" name="q8" value="A"> A) True<br>
+            <input type="radio" name="q8" value="B"> B) False<br>
+            <input type="radio" name="q8" value="C"> C) Ошибка<br>
+            <input type="radio" name="q8" value="D"> D) None<br>
+        </div>
+        <div class="question">
+            <label>9. Что из этого не является логическим оператором?</label><br>
+            <input type="radio" name="q9" value="A"> A) not<br>
+            <input type="radio" name="q9" value="B"> B) and<br>
+            <input type="radio" name="q9" value="C"> C) or<br>
+            <input type="radio" name="q9" value="D"> D) if<br>
+        </div>
+        <div class="question">
+            <label>10. Чему равно выражение (False or True) and not (True)?</label><br>
+            <input type="radio" name="q10" value="A"> A) True<br>
+            <input type="radio" name="q10" value="B"> B) False<br>
+            <input type="radio" name="q10" value="C"> C) Ошибка<br>
+            <input type="radio" name="q10" value="D"> D) None<br>
+        </div>
+        <div class="question">
+            <label>11. Что означает "циклическая логика" в программировании?</label><br>
+            <input type="radio" name="q11" value="A"> A) Логика, основанная на условиях<br>
+            <input type="radio" name="q11" value="B"> B) Логика, основанная на циклах<br>
+            <input type="radio" name="q11" value="C"> C) Логика, основанная на математических операциях<br>
+            <input type="radio" name="q11" value="D"> D) Логика, основанная на операторах сравнения<br>
+        </div>
+        <div class="question">
+            <label>12. Какой результат выражения (True and (False or True))?</label><br>
+            <input type="radio" name="q12" value="A"> A) True<br>
+            <input type="radio" name="q12" value="B"> B) False<br>
+            <input type="radio" name="q12" value="C"> C) Ошибка<br>
+            <input type="radio" name="q12" value="D"> D) None<br>
+        </div>
+        <div class="question">
+            <label>13. Какая структура данных чаще всего используется в логических задачах?</label><br>
+            <input type="radio" name="q13" value="A"> A) Массив<br>
+            <input type="radio" name="q13" value="B"> B) Стек<br>
+            <input type="radio" name="q13" value="C"> C) Очередь<br>
+            <input type="radio" name="q13" value="D"> D) Граф<br>
+        </div>
+        <div class="question">
+            <label>14. Что делает логическая операция "И" (AND)?</label><br>
+            <input type="radio" name="q14" value="A"> A) Возвращает True, если оба операнда True<br>
+            <input type="radio" name="q14" value="B"> B) Возвращает False, если хотя бы одно значение False<br>
+            <input type="radio" name="q14" value="C"> C) Всегда возвращает False<br>
+            <input type="radio" name="q14" value="D"> D) Всегда возвращает True<br>
+        </div>
+        <div class="question">
+            <label>15. Что из нижеперечисленного является примером булевой алгебры?</label><br>
+            <input type="radio" name="q15" value="A"> A) 1 + 1 = 2<br>
+            <input type="radio" name="q15" value="B"> B) (True AND False) = False<br>
+            <input type="radio" name="q15" value="C"> C) "Hello" + "World" = "HelloWorld"<br>
+            <input type="radio" name="q15" value="D"> D) 2 * 2 = 4<br>
+        </div>
+        <div class="question">
+            <label>16. Какая из следующих операций имеет самый высокий приоритет в логических выражениях?</label><br>
+            <input type="radio" name="q16" value="A"> A) not<br>
+            <input type="radio" name="q16" value="B"> B) and<br>
+            <input type="radio" name="q16" value="C"> C) or<br>
+            <input type="radio" name="q16" value="D"> D) Все операторы имеют одинаковый приоритет<br>
+        </div>
+        <div class="question">
+            <label>17. Чему будет равен результат выражения not True or False and True?</label><br>
+            <input type="radio" name="q17" value="A"> A) True<br>
+            <input type="radio" name="q17" value="B"> B) False<br>
+            <input type="radio" name="q17" value="C"> C) Ошибка<br>
+            <input type="radio" name="q17" value="D"> D) None<br>
+        </div>
+        <div class="question">
+            <label>18. Какую роль играют логические выражения в алгоритмах сортировки?</label><br>
+            <input type="radio" name="q18" value="A"> A) Определяют базовые математические операции<br>
+            <input type="radio" name="q18" value="B"> B) Определяют условия для выполнения операций<br>
+            <input type="radio" name="q18" value="C"> C) Определяют порядок данных в массиве<br>
+            <input type="radio" name="q18" value="D"> D) Не имеют значения<br>
+        </div>
+        <div class="question">
+            <label>19. Чему равно выражение True or not (True and False)?</label><br>
+            <input type="radio" name="q19" value="A"> A) True<br>
+            <input type="radio" name="q19" value="B"> B) False<br>
+            <input type="radio" name="q19" value="C"> C) Ошибка<br>
+            <input type="radio" name="q19" value="D"> D) Неопределено<br>
+        </div>
+        <div class="question">
+            <label>20. Что из нижеперечисленного является результатом логического сравнения?</label><br>
+            <input type="radio" name="q20" value="A"> A) Строка<br>
+            <input type="radio" name="q20" value="B"> B) Число<br>
+            <input type="radio" name="q20" value="C"> C) Булевое значение (True/False)<br>
+            <input type="radio" name="q20" value="D"> D) Массив<br>
+        </div>
+        <button type="submit">Проверить ответы</button>
+    </form>
+
+    <div id="result">
+        <h2>Результаты теста:</h2>
+        <div id="score"></div>
+    </div>
+
+    <script>
+        const correctAnswers = [
+            "B", "B", "C", "C", "B", "C", "C", "A", "D", "B",
+            "B", "A", "B", "A", "B", "A", "A", "B", "A", "C"
+        ];
+
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let score = 0;
+            let incorrect = 0;
+
+            const questions = 20;
+
+            for (let i = 1; i <= questions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) {
+                    if (selected.value === correctAnswers[i - 1]) {
+                        score++;
+                    } else {
+                        incorrect++;
+                    }
+                } else {
+                    incorrect++;
+                }
+            }
+
+            document.getElementById('score').innerHTML = `Правильных ответов: ${score} из ${questions}<br>Неправильных ответов: ${incorrect}`;
+            document.getElementById('result').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
