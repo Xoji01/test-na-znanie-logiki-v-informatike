@@ -1,0 +1,1 @@
+# test-na-znanie-logiki-v-informatike
